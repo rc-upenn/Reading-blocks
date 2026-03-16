@@ -49,6 +49,7 @@ def is_ordered_block(w3, block_num):
 	"""
 	block = w3.eth.get_block(block_num, full_transactions=True)
 	ordered = False
+	txs = block["transactions"]
 
 	# TODO YOUR CODE HERE
 	if len(txs) <= 1:
