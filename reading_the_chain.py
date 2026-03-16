@@ -12,7 +12,7 @@ from web3.providers.rpc import HTTPProvider
 
 def connect_to_eth():
 	# TODO insert your code for this method from last week's assignment
-  url = "https://ethereum.publicnode.com"
+	url = "https://ethereum.publicnode.com"
 	w3 = Web3(HTTPProvider(url))
 	assert w3.is_connected(), f"Failed to connect to provider at {url}"
 	return w3
@@ -20,12 +20,12 @@ def connect_to_eth():
 
 def connect_with_middleware(contract_json):
 	# TODO insert your code for this method from last week's assignment
-  with open(contract_json, "r") as f:
+	with open(contract_json, "r") as f:
 		d = json.load(f) 
 		d = d["bsc"] 
 		address = d["address"] 
 		abi = d["abi"] 
-	
+
 	bsc_url = "https://bsc-testnet-rpc.publicnode.com" 
 	w3 = Web3(HTTPProvider(bsc_url)) 
 	assert w3.is_connected(), f"Failed to connect to provider at {bsc_url}"
